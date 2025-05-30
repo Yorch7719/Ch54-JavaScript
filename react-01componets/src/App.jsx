@@ -2,15 +2,16 @@ import './App.css'
 import { Footer } from './pages/footer/footer';
 import { Navbar } from './pages/navbar/navbar';
 import { Home } from './pages/home/home';
+import { Products } from './pages/products/products'
 
 function App() {
   
 
   const myJSX = (
   < >
-    <Navbar />
+    <Navbar title="Día de Harry Potter"/>
     <Home name="Lord Yorchmort" hogwartsHome="Hufflepuff"/>
-    <Home name="Miss Naty" hogwartsHome="Slytherin"/>
+    <Products />
     <Footer cohorte={54}/>
   </ >
 );
