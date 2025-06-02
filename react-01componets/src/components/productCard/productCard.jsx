@@ -1,3 +1,4 @@
+import { ButtonGroup, Button, Typography } from "@mui/material";
 import { useState } from "react";
 
 
@@ -6,31 +7,33 @@ const ProductCard = () => {
 
     const handleIncrement = (maxValue) => {
         console.log("Estoy en el manejo de incremento");
-        if(count < maxValue) setCount( count + 1 );
+        if (count < maxValue) setCount(count + 1);
         console.log("Valor de count:" + count);
     }
 
-        const handleDecrement = (minValue) => {
-            console.log("Estoy en el manejo de decremento");
-            if(count > minValue) setCount( count - 1 );
+    const handleDecrement = (minValue) => {
+        console.log("Estoy en el manejo de decremento");
+        if (count > minValue) setCount(count - 1);
         console.log("Valor de count:" + count);
-        }
+    }
 
     return (
         <div>
-            <p>title</p>
+            <Typography sx={{color:"blue"}} variant="h2" component="h4">title</Typography>
             <p>raiting</p>
             <p>price</p>
             <p>{count}</p>
-            <button onClick ={ () => handleDecrement(1) } > - </button>
-            <button onClick ={ () => handleIncrement(10) } > + </button>
-        </div>
+            <ButtonGroup variant="contained" aria-label="Basic button group">
+                <Button onClick={() => handleDecrement(1)}>-</Button>
+                <Button onClick={() => handleIncrement(10)}>+</Button>
+            </ButtonGroup>
+            </div>
     );
 
 
 };
 
-export {ProductCard};
+export { ProductCard };
 
 /*
  Un componente en React se renderiza baja ciertas condiciones:

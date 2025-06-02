@@ -1,4 +1,4 @@
-
+import "./footer.css"
 
 const destructuracion = () => {
     let a = 10;
@@ -55,14 +55,23 @@ console.log(myHouse);
 }
 destructuracion();
 
+const semana8Style = {
+    fontSize: "2rem",
+    color: "marmol"
+};
 
+const semana8PartyStyle = {
+    fontSize:"4rem", 
+    color:"red"
+};
 
 const Footer = ( {cohorte} ) => {
 
     return (
         <footer>
-            <p>CH {cohorte} - 2025</p>
-            <em>No es Leviosa es Leviosaaaá</em>
+            <p style={ {fontSize: "2rem", color:"goldenrod"} }>CH {cohorte} - 2025</p>
+            <p style={ cohorte===54? semana8Style : semana8PartyStyle }>Semana 8</p>
+            <em className="textFooter">No es Leviosa es Leviosaaaá</em>
         </footer>
     );
 
